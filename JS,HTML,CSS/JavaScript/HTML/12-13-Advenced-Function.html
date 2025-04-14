@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  
+ </head>
+ <body>
+  <script>
+    const multiply = (a, b) => a * b;
+    console.log(multiply(7, 10));
+
+
+  const countPositive = [-2, 3, -5, 7, 10];
+  countPositive.forEach(num => {
+   if(num >= 0){
+    console.log(num);
+   }
+  });
+
+ function addNum(array, num){
+  array = [-2, -1, 0, 99];
+  num = 2;
+  array.map((value, index) => {
+      let a = array[index] += num;
+      console.log(a);
+    }
+
+ )}
+ 
+ const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+ let newFoods;
+ function removeEgg(){
+  newFoods = foods.filter(value => value !== 'egg');
+  console.log(newFoods);
+ }
+  removeEgg();
+
+  const foods2 = ['egg', 'apple', 'egg', 'egg', 'ham'];
+  let count = 0;
+  const newFoods2 = foods2.filter(value => {
+  if(value === 'egg' && count < 2){
+    count ++;
+    return false;
+    } 
+    return true;
+
+  })
+
+ console.log(newFoods2);
+
+
+
+
+
+
+  //addNum();
+   
+  </script>
+ </body>
+</html>

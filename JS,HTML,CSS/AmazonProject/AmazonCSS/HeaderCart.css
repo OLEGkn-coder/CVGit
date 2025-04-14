@@ -1,0 +1,191 @@
+.Amazon-logo{
+ width: 100px;
+ height: 30px;
+}
+
+.Mobile-amazon-logo{
+ width: 35px;
+ height: 35px;
+}
+
+.Logo-button{
+ background-color: white;
+ width: auto;
+ height: auto;
+ border: 1px solid transparent;
+ border-radius:  5px;
+ margin-top: 10px;
+
+}
+
+.Cart-header{
+ display: flex;
+ flex: 1;
+ flex-direction: row;
+ justify-content: space-between;
+ position: relative;
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+ height: 60px;
+ background-color: white;
+}
+
+.Main-link{
+  text-decoration: none;
+  color: rgb(120, 120, 120);
+}
+
+
+
+
+.Mobile-logo-button{
+ background-color: white;
+ position: absolute;
+ left: 24px;
+ width: auto;
+ height: auto;
+ border: 1px solid transparent;
+ border-radius:  5px;
+ margin-top: 5px;
+
+}
+
+.Left-section{
+ display: flex;
+ justify-content: center;
+ width: 160px;
+ align-items: center;
+}
+
+.Middle-section{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: Arial;
+ font-size: 18px;
+ font-weight: bold;
+ color: rgb(79, 79, 79);
+ }
+
+ .Items{
+  color: #4389bb;
+ }
+
+ .Right-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+ }
+
+.Lock-icon{
+ padding-bottom: 2px;
+}
+
+
+
+@media (min-width: 1370px) {
+ .Mobile-logo-button{
+  display: none;
+ }
+ .Logo-button{
+  background-color: white;
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius:  5px;
+  margin-top: 10px;
+ }
+}
+
+@media (min-width: 1200px) and (max-width: 1370px) {
+ .Mobile-logo-button{
+  display: none;
+ }
+ .Logo-button{
+  background-color: white;
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius:  5px;
+  margin-top: 10px;
+ }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+ .Mobile-logo-button{
+  display: none;
+ }
+ .Logo-button{
+  background-color: white;
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius:  5px;
+  margin-top: 10px;
+ }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+ .Mobile-logo-button{
+  display: none;
+  }
+  .Logo-button{
+   background-color: white;
+   width: auto;
+   height: auto;
+   border: 1px solid transparent;
+   border-radius:  5px;
+   margin-top: 10px;
+  }
+}
+@media (min-width: 470px) and (max-width: 700px) {
+ .Mobile-logo-button{
+  background-color: white;
+  position: absolute;
+  left: 24px;
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius:  5px;
+  margin-top: 5px;
+  }
+  .Logo-button{
+  display: none;
+  }
+  .Left-section{
+   display: flex;
+   justify-content: center;
+   width: 100px;
+   align-items: center;
+  }
+} 
+ 
+
+
+@media (min-width: 241px) and (max-width: 470px) {
+ .Mobile-logo-button{
+ background-color: white;
+ position: absolute;
+ left: 24px;
+ width: auto;
+ height: auto;
+ border: 1px solid transparent;
+ border-radius:  5px;
+ margin-top: 5px;
+ }
+ .Logo-button{
+  display: none;
+ }
+ .Left-section{
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  align-items: center;
+ }
+} 
+
+
+

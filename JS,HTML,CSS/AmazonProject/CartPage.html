@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel = "stylesheet" href="AmazonCSS/CartPage.css">
+  <link rel = "stylesheet" href= "AmazonCSS/HeaderCart.css">
+ </head>
+ <body>
+<div class = "Cart-header">
+ <div class = "Left-section">
+  <a class = "Main-link" href = "MainPage.html">
+  <button class = "Logo-button"><img class = "Amazon-logo" src = "CartIcons/amazon-logo.png"></button>    
+   <button class = "Mobile-logo-button"><img class = "Mobile-amazon-logo" src = "CartIcons/amazon-mobile-logo.png"></button>
+  </a>
+    </div>
+      <div class = "Middle-section">
+        <a class = "Main-link" href = "MainPage.html">
+          <p class = "Checkouut-items">Checkout(<span class = "Items" id = "Items-js"> 0 items </span>)</p>
+        </a>
+         </div>
+       <div class = "Right-section">
+      <img class = "Lock-icon" src = "CartIcons/checkout-lock-icon.png">
+   </div>
+</div>
+
+<main>
+ <div class = "Main-section">
+  
+  <div class = "Top-div">
+   <p class = "Top-div-text">Review your order</p>
+  </div>
+  
+  <div class = "Middle-div">
+    <div class = "Middle-div-text1">
+     <p class = "Text1">Order Summary</p>
+    </div>
+    <div class = "Middle-div-text2">
+     <p class = "Text">Items (<span class = "Items2" id = "Items2-js"> 0 </span>):</p>
+     <P class = "Total" id = "Total1-js">$147</P>
+    </div>
+    <div class = "Middle-div-text3">
+     <p class = "Text">Shipping & handling:</p>
+     <P class = "Total2" id = "Total2-js">$4.99</P>
+    </div>
+    <div class = "Middle-div-text">
+     <p class = "Text">Total before tax:</p>
+     <P class = "Total" id = "Total3-js">$152</P>
+    </div>
+    <div class = "Middle-div-text5">
+     <p class = "Text">Estimated tax (10%):</p>
+     <P class = "Total" id = "Total4-js">$15</P>
+    </div>
+    <div class = "Middle-div-text6">
+     <p class = "Text5">Order-total:</p>
+     <P class = "Total5" id = "Total5-js">$167</P>
+    </div>
+    <div class = "Middle-div-button">
+     <button class = "Place-order">Place you order</button>
+    </div>
+  
+    <div class = "Bottom-section">
+     
+     <div class = "Order">
+      
+      <div class = "Delivery">
+       <p class = "Date">Delivery date: Wednesday, March 12</p>
+      </div>
+      
+      <div class = "Goods">
+       
+       <div class = "Goods-img">
+        <img class = "img" src="GoodsImg/6-piece-white-dinner-plate-set.jpg">
+       </div>
+       
+       <div class = "Goods-text">
+        <p class = "Goods-name">6 Piece White Dinner Plate Set</p>
+        <p class = "Cost">$10.90</p>
+        <div class = "Quantity">
+         <p class = "Quantity-text">Quantity: 4</p>
+         <button class = "Update">Update</button>
+         <button class = "Delete">Delete</button>
+        </div>
+       </div>
+      </div>
+      
+      <div class = "Choose-option">
+       <p class = "Delivery-option">Chose a delivery option:</p>
+       
+       <div class = "Input1">
+        <div class = "One">
+        <input type="radio" name="option" value="1" class = "Input">
+       </div>
+       <div class = "Two">
+        <p class = "p1">Wednesday, March 12</p>
+        <p class = "p2">FREE Shipping</p>
+       </div>
+      </div>
+
+      <div class = "Input1">
+       <div class = "One">
+       <input type="radio" name="option" value="1" class = "Input">
+      </div>
+      <div class = "Two">
+       <p class = "p1">Thursday, March 6</p>
+       <p class = "p2">$4.99 - Shipping</p>
+      </div>
+     </div>
+
+     <div class = "Input1">
+      <div class = "One">
+      <input type="radio" name="option" value="1" class = "Input">
+     </div>
+     <div class = "Two">
+      <p class = "p1">Tuesday, March 4</p>
+      <p class = "p2">$9.99 - Shipping</p>
+     </div>
+    </div>
+
+      </div>
+      
+     </div>
+     </div>
+    
+    </div>
+  
+    
+
+   </div>
+ </div>
+</main>
+<script type = "modele" src= "AmazonJS/CartCheck.js"></script>
+ </body>
+</html>

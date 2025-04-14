@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      /*const product = {
+        name: "socks",
+        price: 1090
+      }
+      console.log(product);
+      console.log(product. name);
+      console.log(product.price);
+
+      product.name = "cotton socks";
+      console.log(product);
+
+      product.newProperty = 'hello'; //Create a new property in object Product
+      console.log(product);
+      delete product.newProperty; //Delete this property
+      console.log(product);*/
+
+      /*const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){
+          console.log('function inside object');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2[name]);
+      console.log(product2.rating.stars);
+      product2.fun();  */
+
+      const basketball = {
+        name: 'basketball',
+        price: 2095 ,
+        'dilivery-time': '3 days',
+
+      }
+
+      const product1 = {
+        name: 'socks',
+        price: 2100,
+      }
+
+      const product2 = {
+        name: 'shoes',
+        price: 2100,
+        comparePrice: function(){
+          if(product1.price > product2.price){
+            console.log(`${product1.name} ` + 'is more expensive than ' + `${product2.name}`);
+          }else{
+            console.log(`${product2.name} ` + 'is more expensive than ' + `${product1.name}`);
+          }
+        }
+        
+      }
+      //product2.comparePrice();
+      function isSameProduct(){
+        if(product1.name === product2.name && product1.price=== product2.price){
+          console.log('The same product');
+        }else {
+          console.log('Not the same product');
+        }
+      }
+
+      isSameProduct();
+
+      basketball.price = 2595;
+
+      console.log(basketball);
+
+      let string = 'HELLO';
+      console.log(string.toLowerCase());
+      console.log(string.toUpperCase());
+      console.log(string.repeat(10));
+
+
+    </script>
+  </body>
+</html>

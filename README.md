@@ -17,11 +17,14 @@ Desktop application for device monitoring with real-time sensor simulation and b
 ### Student Organization Website (React + Firebase)
 Web platform used by real users for events and communication.
 
-### Angular Enterprise App (Team Project)
+### Angular(Team Project)
 Frontend development in a team-based environment.
 
 ### Algorithms & Systems & OOP (Java / C++)
 University-level implementations of data structures and system programming tasks.
+
+### Freelance Web Application Development
+Development of custom web applications for clients, including full-cycle implementation (frontend and backend), API integration, and deployment.
 
 ## Currently focusing on
 - FullStack development

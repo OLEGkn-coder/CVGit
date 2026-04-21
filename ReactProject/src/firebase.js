@@ -3,11 +3,7 @@ import { getDatabase } from "firebase/database";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBaoXsNCsK-wkhY9mdakEdGbFLZrsWgI6k",
-  authDomain: "radiokvit-bde2d.firebaseapp.com",
-  databaseURL: "https://radiokvit-bde2d-default-rtdb.firebaseio.com/",
-  projectId: "radiokvit-bde2d",
-  storageBucket: "radiokvit-bde2d.firebasestorage.app",
+//Інформація для мене :)
 };
 
 const app = initializeApp(firebaseConfig);

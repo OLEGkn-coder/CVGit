@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+
+
+
+      .Game{
+        font-family: Arial;
+        font-weight: bold;
+        position: relative;
+        width: 550px;
+        height: 650px;
+        background-color: rgb(121, 121, 121);
+        border-radius: 10px;
+        border-style: solid; 
+        border-color: orange;
+        border-width: 2px;
+        padding-left: 10px;
+      
+      }
+
+      .Button{
+        display: flex;
+    
+        align-items: center;
+        position: absolute;
+        bottom: 150px;
+        right: 22px;
+
+      }
+
+
+
+
+      .Rock, .Paper, .Scissors, .Reset, .Auto-play{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        color: white;
+        font-family: Arial;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+        margin-left: 5px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: transparent;
+      }
+      .Rock:active, .Paper:active, .Scissors:active, .Auto-play:active{
+        background-color: rgb(255, 209, 124);
+      }
+      .Title{
+        color: white;
+        font-family: Arial;
+        font-size: 30px;
+        position: absolute;
+        top: 0px;
+        left: 23px;
+      }
+
+      .GameField{
+        font-family: Arial;
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        border: none;
+        border-radius: 15px;
+        width: 305px;
+        height: 70px;
+        color: white;
+        background-color:rgb(255, 197, 91);
+        }
+
+       .Score{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        right: 85px;
+        top: 270px;
+        
+       }
+
+    .i1{
+      color: white;
+      width: 30px;
+      border: none;
+      height: 30px;
+
+      background-color:rgb(255, 197, 91);
+
+    }
+
+    .p{
+      color: white;
+      font-family: Arial;
+      margin-right: 10px;
+    }
+
+    .d1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .d2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 12px;
+    }
+
+    .img{
+      display: flex;
+      padding-bottom: 5px;
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      height: 50px;
+      width: 50px;
+
+    }
+
+    .img2{
+      width: 35px;
+      height: 35px;
+    }
+
+    .d{
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 190px;
+      right: 50px;
+    }
+
+
+
+    .Message-js{
+      border: 2px solid white;
+    }
+
+    .Message{
+      font-family: Arial;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 520px;
+      height: 50px;
+      position: absolute;
+      top: 550px;
+      right: 20px;
+    }
+
+    .Message-button{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      align-self: center;
+      right: 20px;
+    }
+
+    .Yes-button, .No-button{
+      color: white;
+      border: 2px solid white;
+      background-color:rgb(121, 121, 121);
+      width: 70px;
+      padding: 10px 15px 10px 15px;
+      margin-left: 5px; 
+    }
+
+    .Yes-button:active, .No-button:active{
+      background-color:rgb(255, 197, 91);
+    }
+
+    .Message-text{
+      display: flex;
+    }
+
+    .Message-p{
+      display: flex;
+      align-items: center;
+      align-self: center;
+      margin-left: 20px;
+    }
+
+    </style>
+  </head>
+  <body>
+  <div class = "Game">
+    <p class = "Title">Rock Paper Scissors</p>
+    <input type = "text" class = "GameField" id = "GameField" placeholder= "Let's play">
+    <div class = "d">
+    <p class = "p">You</p>
+    <img class = "img2" src="Photo/rock-emoji.png">
+    <img class = "img2" src="Photo/scissors-emoji.png">
+    <p class = "p">Computer</p>
+  </div>
+    <div class = "Score">
+      <div class = "d1">
+    <p class = "p">You win</p>
+    <input type = "text" id = "Win" class = "i1">
+  </div>
+   <div class = "d1">
+    <p class = "p">You lose</p>
+    <input type = "text" class = "i1" id = "lose">
+   </div>
+   <div class = "d2">
+    <p class = "p">Tie</p>
+    <input type = "text" class = "i1" id = "Tie">
+   </div>
+  </div>
+  <div class = "Button">
+    <button class = "Rock" id = "button1"; onclick="Game(1)";><img class = "img" src = "Photo/rock-emoji.png"></button>
+    <button class = "Paper" id = "button2"; onclick="Game(2)";><img class = "img" src = "Photo/paper-emoji.png"></button>
+    <button class = "Scissors" id = "button3"; onclick="Game(3)";><img class = "img" src = "Photo/scissors-emoji.png"></button>
+    <button class = "Reset" id = "Reset";";>Reset</button>
+    <button class = "Auto-play" id = "Auto-play"; onclick = "Autoplay()";>Auto play</button>
+  </div>
+
+  <div class = "Message" id = "Message">
+  </div>
+
+
+  </div>
+
+    <script>
+       
+       
+/*const b1 = document.getElementById("button1");
+b1.addEventListener('keydown', (event) => {
+  if (event.key === 'r'){
+    Game(1);
+  }
+})
+const b2 = document.getElementById("button2");
+b2.addEventListener('keydown', (event) => {
+  if (event.key === 'p'){
+    Game(2);
+  }
+})
+const b3 = document.getElementById("button3");*/
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 's'){
+    Game(3)
+  }else if (event.key === 'a'){
+    Autoplay();
+  }else if (event.key === '0'){
+      points.win.value = 0;
+      points.lose.value = 0;
+      points.tie.value = 0;
+  } else if (event.key === 'p'){
+    Game(2);
+  } else if (event.key === 'r'){
+    Game(1);
+  }
+})
+
+/*const del = document.getElementById("Reset");
+del.addEventListener('keydown', (event) => {
+  if (event.key === '0'){
+    Reset();
+  }
+})
+
+const auto = document.getElementById("Auto-play");
+auto.addEventListener('keydown', (event) =>{
+  if (event.key === 'a'){
+    Autoplay();
+  }
+})*/
+
+
+       
+       let points = {
+    win: document.getElementById("Win"),
+    lose: document.getElementById("lose"),
+    tie: document.getElementById("Tie"),
+  };
+  points.win.value = JSON.parse(localStorage.getItem('points'));
+  points.lose.value = JSON.parse(localStorage.getItem('points'));
+  points.tie.value= JSON.parse(localStorage.getItem('points'));
+
+
+ 
+ 
+  function Game(value){
+  let moves = '';
+  let moves2 = '';
+  let computerNumber;
+    const randomNumber = Math.random();
+      playerNumber = Number(value);
+        playerNumber.value = value;
+        if(randomNumber >= 0 && randomNumber <= 0.34){
+          computerNumber = 1;
+        }else if(randomNumber >= 0.34 && randomNumber <= 0.67){
+          computerNumber = 2;
+        }else if(randomNumber >= 0.67 && randomNumber <= 1){
+          computerNumber = 3;
+        }
+        let a = document.getElementById("GameField");
+        if (playerNumber === 1 && computerNumber === 1){
+          a.value = "You - Rock , Computer - Rock, Draw"
+          points.tie.value ++;
+          localStorage.setItem('points', JSON.stringify(points.tie.value));
+          moves = 'rock-emoji.png'
+          moves2 = 'rock-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if (playerNumber === 2 && computerNumber === 2){
+          a.value = "You - Paper , Computer - Paper, Draw"
+          points.tie.value ++;
+          localStorage.setItem('points', JSON.stringify(points.tie.value));
+          moves = 'paper-emoji.png'
+          moves2 = 'paper-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 3 && computerNumber === 3){
+          a.value = "You - Scissors , Computer - Scissord, Draw"
+          points.tie.value ++;
+          localStorage.setItem('points', JSON.stringify(points.tie.value));
+          moves = 'scissors-emoji.png'
+          moves2 = 'scissors-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 1 && computerNumber === 2){
+          a.value = "You - Rock,  Computer - Paper, You lose"
+          points.lose.value ++;
+          localStorage.setItem('points', JSON.stringify(points.lose.value));
+          moves = 'rock-emoji.png'
+          moves2 = 'paper-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 1 && computerNumber === 3){
+          a.value = "You - Rock , Computer - Scissord, You win"
+         points.win.value ++;
+         localStorage.setItem('points', JSON.stringify(points.win.value));
+         moves = 'rock-emoji.png'
+          moves2 = 'scissors-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 2 && computerNumber === 1){
+          a.value = "You - Paper , Computer - Rock, You win"
+          points.win.value ++;
+          localStorage.setItem('points', JSON.stringify(points.win.value));
+          moves = 'paper-emoji.png'
+          moves2 = 'rock-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 2 && computerNumber === 3){
+             a.value = "You - Paper , Computer - Scissord, You lose"
+             points.lose.value ++;
+             moves = 'paper-emoji.png'
+          moves2 = 'scissors-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+             localStorage.setItem('points', JSON.stringify(points.lose.value));
+        }else if(playerNumber === 3 && computerNumber === 1){
+             a.value = "You - Scissors , Computer - Rock, You lose"
+             points.lose.value ++;
+             localStorage.setItem('points', JSON.stringify(points.lose.value));
+             moves = 'scissors-emoji.png'
+          moves2 = 'rock-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }else if(playerNumber === 3 && computerNumber === 2){
+             a.value = "You - Scissors , Computer - Paper, You win"
+             points.win.value ++;
+             localStorage.setItem('points', JSON.stringify(points.win.value));
+             moves = 'scissors-emoji.png'
+          moves2 = 'paper-emoji.png'
+          document.querySelector('.d').innerHTML = 
+          `<p class = "p">You</p>
+          <img class = "img2" src="Photo/${moves}">
+          <img class = "img2" src="Photo/${moves2}">
+          <p class = "p">Computer</p>`;
+        }
+      }
+  
+  const ResetButton = document.getElementById("Reset");
+  //const Mes = document.getElementById("Message");
+  ResetButton.addEventListener('click', function(){
+  //classList.add("Message-js");
+  document.getElementById("Message").innerHTML = 
+  
+  ` <div class = "Message-p">
+    <p class = "Message-text" id = "Message-text">Are you sure you want to reset the score?</p>
+    </div>
+    <div class = "Message-button">
+    <button class = "Yes-button" id = "Yes-button">Yes</button>
+    <button class = "No-button" id = "No-button">No</button>
+    </div>`;
+    document.getElementById("Message").classList.add("Message-js");
+    const YesButton = document.getElementById("Yes-button");
+    YesButton.addEventListener('click', function(){
+      points.win.value = 0;
+      points.lose.value = 0;
+      points.tie.value = 0;
+      document.getElementById("Message").innerHTML = '';
+      document.getElementById("Message").classList.remove("Message-js");
+      }
+    );
+    
+    const NoButton = document.getElementById("No-button");
+    NoButton.addEventListener('click', function(){
+      document.getElementById("Message").innerHTML = '';
+      document.getElementById("Message").classList.remove("Message-js");
+      //classList.remove("Message-js");
+    })
+
+
+    });
+
+  /*const YesButton = document.getElementById("Yes-button");
+  const NoButton = document.getElementById("No-button");
+  YesButton.addEventListener('click', function(){
+    points.win.value = 0;
+    points.lose.value = 0;
+    points.tie.value = 0;
+  })*/
+
+
+
+/* function Reset(){
+ points.win.value = 0;
+ points.lose.value = 0;
+ points.tie.value = 0;
+ }*/
+ let autoplayInterval = null; // Для збереження інтервалу
+ let isAutoPlaying = false;
+ let IntervalID;
+ const AutoButton = document.getElementById("Auto-play");
+ function Autoplay() {
+  if(!isAutoPlaying){
+    AutoButton.textContent = 'Stop Playing';
+    IntervalID= setInterval(() => {
+      let num = Math.random();
+      let playerNumber;
+      if(num >= 0 && num<= 0.35){
+      playerNumber = 1;
+    }else if(num >= 0.35 && num <= 0.7){
+      playerNumber = 2;
+    }else if(num >= 0.7 && num <= 1){
+      playerNumber = 3;
+    }
+      Game(playerNumber);
+     }, 1000);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(IntervalID);
+    isAutoPlaying = false;
+    AutoButton.textContent = 'Play';
+  }
+ }
+ 
+
+//const AutoPlay = () => {};
+
+
+
+    </script>
+  </body>
+</html>

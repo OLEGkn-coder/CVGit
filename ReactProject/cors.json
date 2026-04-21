@@ -1,0 +1,12 @@
+
+echo '[
+  {
+    "origin": ["https://radiokvit-bde2d.web.app"],
+    "method": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"],
+    "maxAgeSeconds": 3600,
+    "responseHeader": ["Content-Type", "Authorization"]
+  }
+]' > cors.json
+
+
+gsutil cors set cors.json gs://radiokvit-bde2d.appspot.com

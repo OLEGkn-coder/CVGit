@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Calculator</title>
+   <link rel = "stylesheet" href = "CSS/Calculator.css"></link>
+  </head>
+  <body>
+    <main>
+    <div class = "Calculator" id = Calculator>
+    <section class = "Display-section">
+      <div class = "Display" id = "Display">
+      <input class = "nambers" type = "text" id = "nambers" placeholder="0">
+     
+      </div>
+    </section>
+
+    <section class = "Button-section">
+      <div class = "Number-button" id = "Number-button">
+      <div class = "d1">
+        <button class = "Number" onclick="Calculators('1')" >1</button>
+          <button class = "Number" onclick="Calculators('2')">2</button>
+          <button class = "Number"  onclick="Calculators('3')">3</button>
+        <button class = "Operators"  onclick="Calculators('*')">X</button>
+      </div>
+      <div class = "d1">
+        <button class = "Number"  onclick="Calculators('4')">4</button>
+          <button class = "Number"  onclick="Calculators('5')">5</button>
+          <button class = "Number" onclick="Calculators('6')">6</button>
+        <button class = "Operators"  onclick="Calculators('-')">-</button>
+      </div>
+      <div class = "d1">
+        <button class = "Number"  onclick="Calculators('7')">7</button>
+          <button class = "Number" onclick="Calculators('8')">8</button>
+          <button class = "Number"  onclick="Calculators('9')">9</button>
+        <button class = "Operators"  onclick="Calculators('+')">+</button>
+      </div>
+      <div class = "d1">
+        <button class = "Operators" onclick="Calculators('/')">/</button>
+          <button class = "Number"  onclick="Calculators('0')">0</button>
+          <button class = "Operators"  onclick="Calculators('.')">.</button>
+        <button class = "Operators"  onclick="Results()">=</button>
+        <button class = "Operators" onclick="Reset()">AC</button>
+        <button class = "Operators" onclick="SaveValue()">History</button>
+      </div>
+      </div>
+    </section>
+  </div>
+  </main>
+
+  <script>
+  let res = 0;
+function Calculators(value){
+  const Number = document.getElementById("nambers");
+  Number.value += value;
+
+}
+
+function Results(){
+  const Number =  document.getElementById("nambers");
+  try{
+    Number.value = eval(Number.value);
+    res = Number.value;
+  }
+  catch(error){
+    Number.value = "Error";
+  }
+ 
+}
+
+function Reset(){
+  const Number =  document.getElementById("nambers");
+  Number.value = null;
+}
+
+function SaveValue(value){;
+  localStorage.setItem('res', res);
+  let save = localStorage.getItem('res');
+  console.log(save);
+
+}
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "title1">Hello</title>
+<style>
+</style>
+</head>
+<body>
+ <button id = "button1">Start</button>
+ <button id = "button2">Start</button>
+ <button id = "button3">Add to card</button>
+ <p id = "p1"></p>
+ <button id = "button4" onclick="AddOne()">Add</button>
+ <button id = "button5" onclick=" RemoveOne()">Removee</button>
+
+ <script>
+ let add = function Fun1(){
+  console.log(2+3)
+ }
+
+ add();
+ add();
+
+ function Fun2 (add){
+  console.log(add);
+ }
+
+ setTimeout(function(){
+  const button = document.getElementById('button1');
+  button.addEventListener('click', function(){
+  document.getElementById('button1').innerHTML = 'Finished!';
+  })
+ }, 1000);
+
+ const button2 = document.getElementById('button2');
+ button2.addEventListener('click', function(){
+  if(document.getElementById('button2').innerHTML === 'Start'){
+  setTimeout(function(){
+   document.getElementById('button2').innerHTML = 'Loading...';
+  },3000);} else if (document.getElementById('button2').innerHTML === 'Loading...'){
+   setTimeout(function(){
+   document.getElementById('button2').innerHTML = 'Finished!';
+   },3000);
+  }
+ })
+
+
+ const button3 = document.getElementById('button3');
+ button3.addEventListener('click', function(){
+    setTimeout(function(){
+     document.getElementById('p1').innerHTML = 'Added';
+    }, 100);
+    setTimeout(function(){
+     document.getElementById('p1').innerHTML = '';
+    }, 3000);
+ })
+
+ let num = 0;
+ const button4 = document.getElementById('button4');
+
+  function AddOne(){
+   num++;
+   console.log(num);
+   setInterval(function(){
+    document.getElementById('p1').innerHTML = 'App';
+   }, 1000);
+   setInterval(function(){
+    document.getElementById('p1').innerHTML= `(${num}) New messages`;
+   }, 2000);
+   }
+   function RemoveOne(){
+   num--;
+   console.log(num);
+   setInterval(function(){
+    document.getElementById('p1').innerHTML = 'App';
+   }, 1000);
+   setInterval(function(){
+    document.getElementById('p1').innerHTML= `(${num}) New messages`;
+   }, 2000);
+   
+  }
+
+  const object = {
+   method: () => {
+   },
+   method() {
+
+   
+  }
+
+};
+
+
+
+
+ </script>
+</body>
+</html>

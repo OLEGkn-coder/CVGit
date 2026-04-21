@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM projects</title>
+    <style>
+      .Subscribe-js{
+        color: white;
+        font-family: Arial;
+        font-weight: 600;
+        background-color: black;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 15px 10px 15px;
+        cursor: pointer;
+        margin-bottom: 50px;
+        
+      }
+
+      .Subscribed-js{
+        color: rgb(121, 121, 121);
+        background-color: rgb(243, 243, 243);
+        border: 2px solid rgb(240, 240, 240);
+        margin-bottom: 50px;
+      }
+
+       body{
+        font-family: Arial;
+        font-weight: bold;
+        color: white;
+        background-color:  lightskyblue;
+     } 
+
+      .Shipping-js{
+        padding: 15px 20px 15px 20px;
+        font-family: Arial;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        
+      
+      }
+
+    
+
+      .Calculate-js{
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        background-color: lightgreen;
+        border: none;
+        padding: 15px 20px 15px 20px;
+        transform: translateX(-4px);
+        cursor: pointer;
+        
+      }
+
+      .b1, .b2, .b3, .b4{
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px 10px 15px;
+        background-color: lightgreen;
+        
+      }
+
+      .b1-js, .b2-js{
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px 10px 15px;
+        background-color: lightpink;
+      }
+
+     .Error-js{
+      font-family: Arial;
+      font-weight: bold;
+      color: rgb(255, 55, 55);
+      
+     }
+     
+    .b3-js{
+      background-color: rgb(121, 121, 121);
+    }
+
+    .b4-js{
+      background-color: rgb(121, 121, 121);
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe button</p>
+    <button class = "Subscribe-js">Subscribe</button>
+
+    <p>Rock Paper Scissors</p>
+    <a href="">Click here</a>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input type = "text" class = "Shipping-js" placeholder="Cost of order">
+    <button class="Calculate-js" onclick="Amazon()">Calculate</button>
+    <p class = "Cost-js"></p>
+
+
+    <button class = "b1">Hello</button>
+    <button class = "b2">How are you?</button>
+
+    <button class = "b3">heads</button>
+    <button class = "b4">tails</button>
+    <p class = "p1"></p>
+
+    <input class = "i2" type = "text" placeholder="Enter your name">
+    <button class = "b5" onclick="Function1()">Submit</button>
+    <p class = "p2"></p>
+
+    <input class = "i3" type = "text" placeholder="Enter">
+    <p class = "p3"></p>
+
+
+
+
+    <button class = "b6" onclick=" ShowQuantity()">Show Quantity</button>
+    <button class = "b7" onclick="Addition(1)">Add to Cart</button>
+    <button class = "b8" onclick="Addition(2)">+2</button>
+    <button class = "b9" onclick="Addition(3)">+3</button>
+    <button class = "b10" onclick="Addition(4)">+4</button>
+    <button class = "b11" onclick="Addition(5)">+5</button>
+    <button class = "b12" onclick=" Summination(1)">Remove from cart</button>
+    <button class = "b13" onclick=" Summination(2)">-2</button>
+    <button class = "b14" onclick=" Summination(3)">-3</button>
+    <p class = "p4"></p>
+
+
+
+
+    <button class = "js-button" onclick="fun1()">Test</button>
+
+
+
+    <script>
+ /* function fun1(){
+  const b = document.querySelector('.js-button');
+   let c = document.classList.contains('js-button');
+   console.log(c);
+
+  } 
+*/
+   
+
+   let a = localStorage.getItem('a') ? JSON.parse(localStorage.getItem('a')) : 0;
+  
+  function ShowQuantity(){
+    console.log(a);
+    window.alert(a);
+  }
+
+
+function Addition(value){
+  a += value; 
+  localStorage.setItem('a', JSON.stringify(a));
+ document.querySelector('.p4').innerText = "Show Quantity: " + `${a}`
+ console.log(a);
+
+}
+
+function Summination(value){
+  a -= value;
+  localStorage.setItem('a', JSON.stringify(a));
+ document.querySelector('.p4').innerText = "Show Quantity: " + `${a}`
+}
+
+ document.addEventListener('DOMContentLoaded', function(){
+ document.querySelector('.p4').innerText = "Show Quantity: " + `${a}`
+   
+ })
+
+
+
+
+ document.querySelector('.i3').addEventListener('keyup', function(){
+    let a = document.querySelector('.i3').value;
+    document.querySelector('.p3').innerText = a;
+  })
+   
+ function Function1(){
+      const a = document.querySelector(".i2").value;
+   document.querySelector(".p2").innerHTML = "Hello " + `${a}`
+    
+    
+    
+    document.querySelector(".i2").addEventListener('keydown', function(){
+        document.querySelector(".p2").innerHTML = "Hello " + `${a}`
+    })
+    }
+
+
+    let i =  document.querySelector('.b3');
+    let t =  document.querySelector('.b4');
+   document.querySelector('.b3').addEventListener('click', function(){
+    if(i.classList.contains('b3') === i.classList.contains('b3')  ){
+      i.classList.add('b3-js');
+      t.classList.remove('b4-js');
+    }
+   
+    document.querySelector('.p1').innerHTML = "You choce: heads";
+   })
+
+   document.querySelector('.b4').addEventListener('click', function(){
+    if(t.classList.contains('b4') === t.classList.contains('b4')){
+      t.classList.add('b4-js');
+      i.classList.remove('b3-js');
+    }
+    document.querySelector('.p1').innerHTML = "You choce: tails";
+   })
+
+
+  const B = document.querySelector('.b1');
+  const C = document.querySelector('.b2'); 
+  
+  
+  document.querySelector('.b1').addEventListener('click', function(){
+    if(C.innerText === 'How are you?'){
+       document.querySelector('.b2').innerText = 'Nice';
+       B.classList.add('b1-js');
+       C.classList.add('b2-js');
+    }else {
+      B.classList.remove('b1-js');
+      C.classList.remove('b2-js');
+      document.querySelector('.b2').innerText = 'How are you?';
+    }
+  
+  
+  
+  
+  
+      })
+
+
+    
+    const Subscribe = document.querySelector('.Subscribe-js')
+    Subscribe.addEventListener('click', function(){
+      if (Subscribe.innerText === 'Subscribe'){
+        Subscribe.innerText = 'Subscribed';
+        Subscribe.classList.add('Subscribed-js');
+
+      }else {
+        Subscribe.innerText = 'Subscribe';
+        Subscribe.classList.remove('Subscribed-js');
+        
+      
+        
+
+       
+      }
+    })
+
+
+
+document.querySelector('.Shipping-js').addEventListener('keydown', function(event){
+ if(event.key === "Enter"){
+  Amazon();
+ }
+})
+
+    function Amazon(){
+      const Shipping = 10;
+      const a = document.querySelector('.Shipping-js');
+      let b = Number(a.value);
+      console.log(b);
+      const c =  document.querySelector('.Cost-js');
+
+      if(b < 0){
+        c.classList.add('Error-js');
+        document.querySelector('.Cost-js').innerHTML = "Error: cost cannot be less than $O";
+      }else if(b >= 0){
+        c.classList.remove('Error-js');
+      }
+
+
+
+      if(b >=0 && b <= 40){
+      b = ((b * 100) + (Shipping * 100)) / 100;
+      document.querySelector('.Cost-js').innerHTML = `$${b}` ;
+     }else if(b >= 40){
+      document.querySelector('.Cost-js').innerHTML = `$${b}`;
+      
+     }
+   
+    }
+    
+    </script>
+  </body>
+</html>

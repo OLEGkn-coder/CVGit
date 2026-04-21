@@ -1,0 +1,258 @@
+body{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 1000px;
+}
+
+.Main-section{
+ display: flex;
+ flex-direction: column;
+ font-family: Arial;
+ margin-top: 120px;
+ 
+}
+
+.Middle-div{
+ display: flex;
+ flex-direction: column;
+ width: 470px;
+ height: 333px;
+ border: 1px solid rgb(224, 224, 224);
+ border-radius: 5px;
+ padding-top: 5px;
+}
+
+.Middle-div-text{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ height: 35px;
+ margin: 0px 15px 0px 15px
+}
+
+.Middle-div-text3{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ height: 35px;
+ margin: 8px 15px 10px 15px
+}
+
+
+.Middle-div-text2{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ height: 20px;
+ margin: 0px 15px 0px 15px
+
+} 
+
+.Text{
+ color: rgb(83, 83, 83);
+ margin: 0;
+}
+
+.Top-div-text{
+ font-size: 20px;
+ font-weight: bold;
+}
+
+
+.Middle-div-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Place-order{
+ border: none;
+ border-radius: 15px;
+ background-color:  rgb(245, 192, 80);
+ padding: 15px 170px 15px 170px;
+}
+
+.Text1{
+ font-size: 17px;
+ font-weight: bold;
+ margin: 15px 0px 15px 15px;
+}
+
+.Middle-div-text5{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 25px;
+ margin: 10px 15px 0px 15px;
+ border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.Total{
+ margin: 0;
+}
+
+.Total2{
+ margin: 0;
+ border-bottom: 1px solid rgb(224, 224, 224);
+ height: 25px;
+}
+
+.Text5{
+font-size: 20px;
+font-weight: bold;
+color: rgb(196, 43, 43);
+margin-bottom: 30px;
+}
+
+.Middle-div-text6{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 45px;
+ margin: 0px 15px 0px 15px;
+}
+
+.Total5{
+ font-size: 20px;
+font-weight: bold;
+color: rgb(190, 33, 33);
+margin-bottom: 30px;
+}
+
+
+.Bottom-section{
+ margin-top: 90px;
+}
+
+
+.img{
+ object-fit: contain;
+  width: 100px;
+  height: 110px;
+  padding-left: 20px;
+}
+
+.Goods-img{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.Order{
+ display: flex;
+ flex-direction: column;
+ border: 1px solid rgb(224, 224, 224);
+ width: 470px;
+ height: 380px;
+ 
+
+}
+
+.Goods{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+
+
+}
+
+.Goods-text{
+display: flex;
+flex-direction: column;
+justify-content:center;
+}
+
+.Choose-option{
+ display: flex;
+ flex-direction: column;
+}
+
+.Input1{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ margin: 0px 0px 15px 15px;
+}
+
+.Two{
+ display: flex;
+ flex-direction: column;
+ justify-content: center; 
+ margin-left: 5px;
+}
+
+.Goods-name{
+ font-size: 16px;
+ font-weight: bold;
+ width: 300px;
+ margin: 0px;
+ margin-bottom: 10px;
+}
+
+.Cost{
+ font-weight: bold;
+ color:rgb(190, 33, 33);
+ margin: 0;
+}
+
+.Quantity-text{
+ margin: 5px 10px 0px 0px;
+}
+
+.Goods-text{
+ width: 330px;
+}
+
+.Quantity{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.Update, .Delete{
+  color: #4389bb;
+  border: none;
+  background-color: transparent;
+  padding: 5px 5px 0px 0px;
+}
+
+.Update:hover,  .Delete:hover{
+ color: rgb(245, 192, 80);
+}
+
+.Delivery{
+ height: 45px;
+ margin: 10px 0px 0px 20px;
+}
+
+.Date{
+ color: rgb(17, 116, 17);
+ font-weight: bold;
+ font-size: 18px;
+}
+
+.One{
+ margin: 0;
+}
+
+.p1{
+ color:  rgb(17, 116, 17);
+ margin: 0px 0px 5px 0px;
+}
+
+.p2{
+ font-size: 13px;
+ color:  rgb(83, 83, 83);
+ margin: 0;
+}
+
+.Delivery-option{
+ font-size:  16px;
+ font-weight: bold;
+  margin: 10px 0px 10px 20px;
+}

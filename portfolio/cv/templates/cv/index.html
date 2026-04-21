@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{% static 'cv/css/style.css' %}" />
   </head>
   <body>
-    <!-- NAV -->
     <header class="nav" id="top">
       <div class="nav__inner">
         <a href="#top" class="nav__logo"
@@ -31,13 +30,11 @@
         <a href="#contact" class="btn btn--sm">Найняти</a>
       </div>
     </header>
-
-    <!-- HERO -->
     <section class="hero" id="about">
       <div class="hero__grid">
         <div class="hero__text">
           {% if about.open_to_work %}
-          <div class="badge">🟢 Відкритий до роботи</div>
+          <div class="badge">Відкритий до роботи</div>
           {% endif %}
           <h1 class="hero__name">{{ about.name }}</h1>
           <p class="hero__role">{{ about.role }}</p>
@@ -47,7 +44,7 @@
             <a href="#contact" class="btn btn--outline">Зв'язатися</a>
           </div>
           <div class="hero__meta">
-            <span>📍 {{ about.location }}</span>
+            <span>{{ about.location }}</span>
             <a href="mailto:{{ about.email }}">{{ about.email }}</a>
           </div>
         </div>
@@ -97,7 +94,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section__title">Навички</h2>
@@ -123,7 +119,6 @@
             </ul>
           </div>
           {% empty %}
-          <!-- Якщо БД порожня — показуємо статичні дані -->
           <div class="skill-group">
             <h3 class="skill-group__title">Backend</h3>
             <ul class="skill-list">
@@ -160,8 +155,6 @@
         </div>
       </div>
     </section>
-
-    <!-- PROJECTS -->
     <section class="section section--dark" id="projects">
       <div class="container">
         <div class="section__head">
@@ -199,7 +192,6 @@
             </div>
           </article>
           {% empty %}
-          <!-- Заглушки, поки не додані проєкти через /admin -->
           <article class="project-card">
             <div class="project-card__body">
               <h3 class="project-card__title">Habit Tracker</h3>
@@ -281,8 +273,6 @@
         </div>
       </div>
     </section>
-
-    <!-- EXPERIENCE -->
     <section class="section" id="experience">
       <div class="container container--narrow">
         <h2 class="section__title">Досвід</h2>
@@ -305,7 +295,6 @@
           </div>
           {% endfor %}
         </div>
-
         <h2 class="section__title" style="margin-top: 3rem">Освіта</h2>
         <div class="timeline">
           {% for edu in education %}
@@ -323,8 +312,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
     <section class="section section--accent" id="contact">
       <div class="container container--narrow">
         <h2 class="section__title">Зв'язатися</h2>

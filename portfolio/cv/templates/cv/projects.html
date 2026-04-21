@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проєкти — {{ about.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'cv/css/style.css' %}" />
+</head>
+<body>
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">{{ about.name | truncatewords:1 }}<span class="dot">.</span></a>
+    <nav class="nav__links">
+      <a href="/">← Назад</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 6rem;">
+  <div class="container">
+    <h1 class="section__title">Всі проєкти</h1>
+    <div class="projects-grid">
+      {% for project in projects %}
+      <article class="project-card">
+        <div class="project-card__body">
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          <p class="project-card__desc">{{ project.description }}</p>
+          <div class="project-card__tags">
+            {% for tech in project.get_tech_list %}
+            <span class="tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="project-card__links">
+          {% if project.github_url %}<a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
+          {% if project.live_url %}<a href="{{ project.live_url }}" target="_blank" rel="noopener" class="link--accent">Live →</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 {{ about.name }}</p>
+  </div>
+</footer>
+</body>
+</html>
